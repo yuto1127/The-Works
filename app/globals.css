@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.dark {
+  --background: #1e1e1e;
+  --foreground: #cccccc;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes glitch {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateX(0);
+  }
+  20%,
+  80% {
+    opacity: 0.5;
+    transform: translateX(-2px);
+  }
+  40%,
+  60% {
+    opacity: 0.4;
+    transform: translateX(2px);
+  }
+}
+
+.glitch-noise {
+  animation: glitch 0.5s ease-in-out;
+}
+
+nextjs-portal {
+  left: auto;
+  top: auto;
+}
